@@ -1,0 +1,189 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Изображение сверху -->
+        <ImageView
+            android:id="@+id/womanImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/woman" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- Текст под изображением -->
+        <LinearLayout
+            android:id="@+id/aboutUs"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="35dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_text"
+                style="@style/TextStyle" />
+
+            <ImageView
+                android:id="@+id/handsImage"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hahds"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_care"
+                style="@style/TextStyle"
+                android:layout_margin="18dp"
+                android:layout_marginRight="30dp"
+                android:gravity="left"
+                android:orientation="vertical"/>
+        </LinearLayout>
+
+            <View
+                android:id="@+id/orangeView"
+                android:layout_width="50dp"
+                android:layout_height="1000dp"
+                android:background="@color/orange"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout >
+
+        <LinearLayout
+            android:id="@+id/services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="35dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/childrenImage"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/children" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:orientation="vertical"
+                android:text="@string/about_us_care"
+                style="@style/TextStyle" />
+
+        </LinearLayout>
+
+        <!-- Бирюзовая полоска с надписью -->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="@string/join"
+            style="@style/LabelStyle"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_with_icon"
+            android:layout_marginTop="30dp" />
+
+        <LinearLayout
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:text="@string/information_title"
+                style="@style/LabelStyle"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:text="@string/information_text"
+                style="@style/TextStyle"
+                android:gravity="left" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/reccomendation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/LabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@color/darkblue"
+                    android:text="@string/recommendation"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/recommendationImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/recommendation" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tubing"
+                android:layout_marginLeft="100dp"
+                android:rotation="10"
+                android:translationY="-45dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</ScrollView>
