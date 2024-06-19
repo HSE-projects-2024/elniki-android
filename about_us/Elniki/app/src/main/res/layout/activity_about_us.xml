@@ -23,10 +23,10 @@
         <!-- Текст под изображением -->
         <LinearLayout
             android:id="@+id/aboutUs"
-            android:layout_width="335dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="18dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
             android:layout_marginTop="35dp"
             android:gravity="left"
             android:orientation="vertical">
@@ -53,12 +53,12 @@
                 android:layout_marginTop="30dp"/>
 
             <TextView
-                android:layout_width="313dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/about_us_care"
                 style="@style/TextStyle"
                 android:layout_margin="18dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="50dp"
                 android:gravity="left"
                 android:orientation="vertical"/>
         </LinearLayout>
@@ -84,6 +84,7 @@
             <ImageView
                 android:id="@+id/childrenImage"
                 android:layout_width="250dp"
+                android:layout_marginLeft="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:adjustViewBounds="true"
