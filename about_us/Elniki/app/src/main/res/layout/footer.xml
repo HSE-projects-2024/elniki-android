@@ -1,30 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    style="@style/MarginStyle">
+
+    <com.google.android.material.divider.MaterialDivider
+        style="@style/AppDivider"
+        app:dividerColor="@color/orange600"/>
+
+
+    <ImageButton
+        android:id="@+id/imageButtonMap"
+        style="@style/ButtonSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="onFutterButtonClick"
+        android:src="@drawable/googlemaps"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_text"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/textContainer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <View
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#808080" />
+        <ImageButton
+            android:id="@+id/imageButtonVK"
+            style="@style/ButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onFutterButtonClick"
+            android:src="@drawable/vk"  />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/footer1"
-            android:gravity="center" />
+        <ImageButton
+            android:id="@+id/imageButtonInst"
+            style="@style/ButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onFutterButtonClick"
+            android:src="@drawable/instagram"  />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/footer2"
-            android:gravity="center"
-            android:lineSpacingExtra="-5dp" />
+        <ImageButton
+            android:id="@+id/imageButtonTelegram"
+            style="@style/ButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onFutterButtonClick"
+            android:src="@drawable/telegram"  />
+
+
     </LinearLayout>
-</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2024_elniki"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/padding_size"/>
+
+
+</LinearLayout>

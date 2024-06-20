@@ -1,16 +1,599 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:openDrawer="start"
     android:id="@+id/drawerLayout"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".BaseActivity">
 
-    <include layout="@layout/activity_main_content" />
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/activity_main_content" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            style="@style/AppDivider"
+            app:dividerColor="@color/blue400"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="@string/Title"
+                android:textAlignment="center"
+                android:textColor="@color/blue400"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/BestHistory"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+            <Button
+                android:id="@+id/buttonServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Services"
+                android:textAlignment="center"
+                android:theme="@style/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintVertical_bias="0.6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            style="@style/AppDivider"
+            app:dividerColor="@color/orange600"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nature"
+            android:textAlignment="center"
+            android:textAppearance="@style/Medium"
+            android:padding="@dimen/padding_size"/>
+
+        <ImageView
+            android:id="@+id/backgroundImage2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ski"
+            android:layout_marginTop="@dimen/padding_size"
+            android:layout_marginBottom="@dimen/padding_size"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Chairlift"
+            android:textAlignment="center"
+            android:textAppearance="@style/Large"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/padding_size"
+            style="@style/MarginStyle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FirstChairlift"
+            android:textAlignment="center"
+            android:textAppearance="@style/Medium"
+            style="@style/MarginStyle"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greattrails"
+            android:textAlignment="center"
+            android:textAppearance="@style/Large"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/padding_size"
+            style="@style/MarginStyle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Trailsforallskilllevels"
+            android:textAlignment="center"
+            android:textAppearance="@style/Medium"
+            android:layout_marginBottom="@dimen/padding_size"
+            style="@style/MarginStyle"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            style="@style/AppDivider"
+            android:layout_marginStart="@dimen/padding_size"
+            android:layout_marginEnd="@dimen/padding_size"
+            app:dividerColor="@color/blue400"/>
+
+        <ImageView
+            android:id="@+id/backgroundImage3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/skier"
+            android:layout_marginTop="@dimen/padding_size"
+            style="@style/MarginStyle"
+            android:layout_marginBottom="@dimen/padding_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_size"
+            android:layout_marginBottom="@dimen/padding_size"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/backgroundImage4"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image32"
+                android:layout_marginStart="@dimen/padding_size"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meters"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Large"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/padding_size"
+                    style="@style/MarginStyle"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Maximumelevation"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Medium"
+                    android:layout_marginBottom="@dimen/padding_size"
+                    style="@style/MarginStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_size"
+            android:layout_marginBottom="@dimen/padding_size"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/backgroundImage5"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image33"
+                android:layout_marginStart="@dimen/padding_size"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Modern"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Large"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/padding_size"
+                    style="@style/MarginStyle"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modernsnowpark"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Medium"
+                    android:layout_marginBottom="@dimen/padding_size"
+                    style="@style/MarginStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="200dp"
+                android:layout_height="550dp"
+                android:layout_marginEnd="124dp"
+                app:dividerColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="110dp"
+                android:layout_height="350dp"
+                app:dividerColor="@color/blue600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="253dp"
+                android:layout_height="415dp"
+                app:dividerColor="@color/pink600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="@dimen/image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/narciarz"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:dividerColor="@color/blue600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/buttonAboutTheResort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/AboutResort"
+                android:textAlignment="center"
+                android:theme="@style/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/blue600"
+            android:padding="@dimen/padding_size">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+                <TableRow android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvData1"
+                        style="@style/TableHeaderText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/skipass_type"/>
+                    <TextView
+                        android:id="@+id/tvData2"
+                        style="@style/TableHeaderText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/adult_rate"/>
+                    <TextView
+                        style="@style/TableHeaderText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/child_rate"/>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/card_cost"/>
+
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/card_cost_value"
+                        />
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/single_lift"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/single_lift_adult"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/single_lift_child"/>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/walking_rate"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/walking_rate_adult"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/walking_rate_child"/>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/one_day_lift"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/one_day_lift_adult"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/one_day_lift_child"/>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/training_lift"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/training_lift_adult"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/training_lift_child"/>
+                </TableRow>
+
+                <TableRow android:gravity="center">
+                    <TextView
+                        style="@style/TableText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/vip_lift"/>
+                    <TextView
+                        style="@style/TableText.P"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/vip_lift_value"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="200dp"
+                android:layout_height="450dp"
+                app:dividerColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:dividerColor="@color/blue600"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:dividerColor="@color/Brownish600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="@dimen/image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kasina"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonSkipass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:text="@string/Skipass"
+                android:textAlignment="center"
+                android:theme="@style/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/Brownish600"
+            android:padding="@dimen/padding_size"
+            android:gravity="center">
+
+            <TextView
+                style="@style/MarginStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adr"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/padding_size"/>
+
+            <ImageView
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map"
+                android:padding="@dimen/padding_size"/>
+
+            <Button
+                android:id="@+id/buttonContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_size"
+                android:text="@string/Contact"
+                android:textAlignment="center"
+                android:theme="@style/button_background" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Com"
+            android:textAlignment="center"
+            android:textAppearance="@style/Medium"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            style="@style/MarginStyle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider2"
+                android:layout_width="200dp"
+                android:layout_height="700dp"
+                app:dividerColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="350dp"
+                android:layout_height="390dp"
+                app:dividerColor="@color/Green400"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+            </com.google.android.material.divider.MaterialDivider>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="240dp"
+                android:layout_height="@dimen/image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kasina"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/footer"/>
+
+    </LinearLayout>
+    </ScrollView>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
@@ -18,7 +601,6 @@
         app:menu="@menu/drawer_items"
         app:headerLayout="@layout/drawer_header"
         android:layout_gravity="start" />
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

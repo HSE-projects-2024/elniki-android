@@ -3,8 +3,61 @@
     <style name="Base.Theme.Elniki" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/ralewayregular</item>
     </style>
 
     <style name="Theme.Elniki" parent="Base.Theme.Elniki" />
+
+    <style name="ButtonSize">
+        <item name="android:layout_width">@dimen/button_size</item>
+        <item name="android:layout_height">@dimen/button_size</item>
+    </style>
+
+    <style name="MarginStyle">
+        <item name="android:layout_marginStart">@dimen/padding_size</item>
+        <item name="android:layout_marginEnd">@dimen/padding_size</item>
+    </style>
+
+    <style name="AppDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+
+    <style name="AppDividerBigBlue">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <style name="TableHeaderText">
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="TableText">
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TableText.P">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="Large.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="Large.Blue400">
+        <item name="android:textColor">@color/blue400</item>
+    </style>
+
+    <style name="Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
 </resources>

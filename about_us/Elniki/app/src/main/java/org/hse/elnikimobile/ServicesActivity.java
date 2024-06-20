@@ -24,6 +24,7 @@ public class ServicesActivity extends BaseActivity {
         Button buttonServices = findViewById(R.id.buttonServices);
         Button buttonSkiSlopes = findViewById(R.id.buttonSkiSlopes);
         Button buttonAboutUs = findViewById(R.id.buttonAboutUs);
+        Button buttonSkipass = findViewById(R.id.buttonSkipass);
 
         buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,14 @@ public class ServicesActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ServicesActivity.this, AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonSkipass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ServicesActivity.this, Skipass.class);
                 startActivity(intent);
             }
         });

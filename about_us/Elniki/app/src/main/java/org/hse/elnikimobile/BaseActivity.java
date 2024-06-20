@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         navigationView.getMenu().findItem(R.id.nav_home).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                handleMenuItemClick(TableActivity.class);
+                handleMenuItemClick(MainActivity.class);
                 return true;
             }
         });

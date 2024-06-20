@@ -62,6 +62,7 @@
             android:text="@string/skipass_description" />
 
         <Button
+            android:id="@+id/buttonSkipass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

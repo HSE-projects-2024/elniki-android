@@ -8,4 +8,11 @@
     <color name="red">#E06666</color>
     <color name="darkblue_2">#001f3d</color>
     <color name="green">#607D3B</color>
+    <color name="orange600">#F89434</color>
+    <color name="blue600">#032C4A</color>
+    <color name="blue400">#3591A5</color>
+    <color name="blue300">#C7F5FF</color>
+    <color name="pink600">#DC725D</color>
+    <color name="Green400">#63804D</color>
+    <color name="Brownish600">#272022</color>
 </resources>

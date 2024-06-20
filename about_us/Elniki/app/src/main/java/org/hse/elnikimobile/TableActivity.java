@@ -80,10 +80,6 @@ public class TableActivity extends AppCompatActivity {
                 items.setData_1(our_table.children().get(i).child(0).text());
                 items.setData_2(our_table.children().get(i).child(1).text());
                 items.setData_3(our_table.children().get(i).child(2).text());
-                items.setData_4(our_table.children().get(i).child(3).text());
-                items.setData_5(our_table.children().get(i).child(4).text());
-                items.setData_6(our_table.children().get(i).child(5).text());
-                items.setData_7(our_table.children().get(i).child(6).text());
                 arrayList.add(items);
             }
             runOnUiThread(new Runnable() {
