@@ -4,10 +4,7 @@ public class ListItemClass {
     String data_1;
     String data_2;
     String data_3;
-    String data_4;
-    String data_5;
-    String data_6;
-    String data_7;
+
 
     public String getData_1() {
         return data_1;
@@ -33,32 +30,4 @@ public class ListItemClass {
         this.data_3 = data_3;
     }
 
-    public String getData_4() {
-        return data_4;
-    }
-
-    public void setData_4(String data_4) {
-        this.data_4 = data_4;
-    }
-    public String getData_5() {
-        return data_5;
-    }
-
-    public void setData_5(String data_5) {
-        this.data_5 = data_5;
-    }
-    public String getData_6() {
-        return data_6;
-    }
-
-    public void setData_6(String data_6) {
-        this.data_6 = data_6;
-    }
-    public String getData_7() {
-        return data_7;
-    }
-
-    public void setData_7(String data_7) {
-        this.data_7 = data_7;
-    }
 }
