@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "org.hse.elniki"
+    namespace = "org.hse.elnikimobile"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "org.hse.elniki"
+        applicationId = "org.hse.elnikimobile"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

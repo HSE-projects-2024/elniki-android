@@ -7,7 +7,7 @@
     tools:openDrawer="start"
     android:id="@+id/drawerLayout"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".BaseActivity">
 
     <include layout="@layout/activity_main_content" />
 

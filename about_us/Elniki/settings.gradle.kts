@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Elniki"
+rootProject.name = "ElnikiMobile"
 include(":app")
  

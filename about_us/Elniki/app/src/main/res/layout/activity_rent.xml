@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:openDrawer="start"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
+    tools:context=".BaseActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/activity_main_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ski_girl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/rental"
+            style="@style/LabelStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_hours"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                style="@style/TextStyle" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/darkblue_2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_rent"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/LabelStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/snowtubing"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/LabelStyle" />
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/snowtubing_descr"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/TextStyle" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="end"
+                android:src="@drawable/snowtubing" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/ski"
+            style="@style/LabelStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="300dp"
+                android:layout_gravity="start"
+                android:src="@drawable/ski_rent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                android:background="@color/green"
+                android:text="@string/ski_price"
+                style="@style/LabelStyle"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="60dp"
+            style="@style/LabelStyle"
+            android:textSize="16sp"
+            android:text="@string/ski_rent_descr_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="60dp"
+            style="@style/TextStyle"
+            android:text="@string/ski_rent_descr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginHorizontal="60dp"
+            style="@style/TextStyle"
+            android:text="@string/ski_rent_descr_2" />
+
+        <ImageView
+            android:layout_width="340dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ski_rent_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/snowboard"
+            style="@style/LabelStyle"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:padding="20dp"
+                    android:background="@color/darkblue"
+                    android:text="@string/ski_price"
+                    style="@style/LabelStyle"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="195dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/snowboard_rent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="bottom"
+                android:text="@string/snowboard_rent_choice"
+                style="@style/TextStyle"
+                android:background="@color/white" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="20dp"
+            style="@style/TextStyle"
+            android:text="@string/snowboard_descr" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:background="@color/red" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="60dp"
+                android:layout_gravity="end"
+                android:src="@drawable/snowboard_people" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/run_ski"
+            style="@style/LabelStyle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="60dp"
+                android:paddingEnd="25dp"
+                android:background="@color/orange"
+                android:text="@string/run_ski_price"
+                style="@style/LabelStyle"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:layout_gravity="end"
+                android:gravity="end" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="start"
+                android:src="@drawable/run_ski" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="170dp"
+                android:layout_marginEnd="90dp"
+                style="@style/TextStyle"
+                android:text="@string/run_ski_fan" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="320dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/rent_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="50dp"
+                style="@style/TextStyle"
+                android:text="@string/run_ski_descr" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/tracking"
+            style="@style/LabelStyle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="310dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/tracking" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:padding="20dp"
+                    android:background="@color/darkblue_2"
+                    android:text="@string/run_ski_price"
+                    style="@style/LabelStyle"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="150dp"
+                style="@style/TextStyle"
+                android:text="@string/tracking_descr" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:background="@color/blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="30dp"
+                    style="@style/TextStyle"
+                    android:text="@string/tracking_descr_2" />
+
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginHorizontal="60dp"
+                    android:src="@drawable/tracking_2" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/bikes"
+            style="@style/LabelStyle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:padding="20dp"
+                    android:background="@color/red"
+                    android:text="@string/bikes_price"
+                    style="@style/LabelStyle"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:src="@drawable/bike" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                style="@style/TextStyle"
+                android:text="@string/bikes_ad" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="60dp"
+            style="@style/TextStyle"
+            android:text="@string/bikes_descr" />
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bike_2" />
+
+        <include layout="@layout/footer" />
+
+    </LinearLayout>
+
+
+
+    </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawer_items"
+        app:headerLayout="@layout/drawer_header"
+        android:layout_gravity="start" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

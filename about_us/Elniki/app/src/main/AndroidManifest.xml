@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Elniki"
         tools:targetApi="31">
+        <activity android:name=".RentActivity" />
+        <activity android:name=".SkiSlopesActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".TableActivity" />
+        <activity android:name=".ServicesActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
