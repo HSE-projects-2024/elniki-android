@@ -59,6 +59,14 @@ public abstract class BaseActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        navigationView.getMenu().findItem(R.id.nav_contacts).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                handleMenuItemClick(Contact2Activity.class);
+                return true;
+            }
+        });
     }
 
     protected void handleMenuItemClick(Class activityClass) {

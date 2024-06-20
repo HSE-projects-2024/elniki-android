@@ -1,12 +1,18 @@
 package org.hse.elnikimobile;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.hse.elnikimobile.BaseActivity;
@@ -31,9 +37,7 @@ public class MainActivity extends BaseActivity {
     private Runnable runnable;
     private ListView listView;
     private CustomArrayAdapter adapter;
-    private List<ListItemClass> arrayList1;
-    private List<ListItemClass> arrayList2;
-    private List<ListItemClass> arrayList3;
+    private List<ListItemClass> arrayList;
     ArrayList<String> firstColumn = new ArrayList<>();
     ArrayList<String> secondColumn = new ArrayList<>();
     ArrayList<String> fifthColumn = new ArrayList<>();
@@ -44,6 +48,50 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tableLayout = findViewById(R.id.tableLayout);
+        drawerLayout = findViewById(R.id.drawerLayout);
+        buttonDrawerToggle = findViewById(R.id.buttonDrawerToggle);
+        navigationView = findViewById(R.id.navigationView);
+
+        buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.open();
+            }
+        });
+
+
+        super.setupMenuItems(); // Вызов родительского метода
+
+        ImageButton imageButtonInst = findViewById(R.id.imageButtonInst);
+        ImageButton imageButtonVK = findViewById(R.id.imageButtonVK);
+        ImageButton imageButtonTelegram = findViewById(R.id.imageButtonTelegram);
+        ImageButton imageButtonMap = findViewById(R.id.imageButtonMap);
+
+        imageButtonInst.setOnClickListener(v -> openUrl(URL_INSTAGRAM));
+
+        imageButtonVK.setOnClickListener(v -> openUrl(URL_VK));
+
+        imageButtonTelegram.setOnClickListener(v -> openUrl(URL_Telegram));
+
+        imageButtonMap.setOnClickListener(v -> openUrl(URL_MAP));
+
+        Button buttonContact = findViewById(R.id.buttonContact);
+        buttonContact.setOnClickListener(v -> {
+            openContactActivity();
+        });
+        Button buttonSkipass = findViewById(R.id.buttonSkipass);
+        buttonSkipass.setOnClickListener(v -> {
+            openSkipassActivity();
+        });
+        Button buttonServices = findViewById(R.id.buttonServices);
+        buttonServices.setOnClickListener(v -> {
+            openServicesActivity();
+        });
+        Button buttonAboutTheResort = findViewById(R.id.buttonAboutTheResort);
+        buttonAboutTheResort.setOnClickListener(v -> {
+            openAboutUsActivity();
+        });
+
         init();
 
         // Убедитесь, что данные загружаются и таблица обновляется после загрузки данных
@@ -63,6 +111,37 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
+    private void openUrl(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void onMenuButtonClick(View view) {
+
+        Toast.makeText(this, "MenuButton clicked!", Toast.LENGTH_SHORT).show();
+    }
+
+    private void openContactActivity() {
+        Intent intent = new Intent(this, org.hse.elnikimobile.Contact2Activity.class);
+        startActivity(intent);
+    }
+    private void openServicesActivity() {
+        Intent intent = new Intent(this, org.hse.elnikimobile.ServicesActivity.class);
+        startActivity(intent);
+    }
+
+    private void openAboutUsActivity() {
+        Intent intent = new Intent(this, org.hse.elnikimobile.AboutUsActivity.class);
+        startActivity(intent);
+    }
+    private void openSkipassActivity() {
+        Intent intent = new Intent(this, org.hse.elnikimobile.Skipass.class);
+        startActivity(intent);
+    }
+
+
 
     private void addRowsToTable(TableLayout tableLayout, ArrayList<String> skipassTypes, ArrayList<String> adultRates, ArrayList<String> childRates) {
         for (int i = 0; i < skipassTypes.size(); i++) {
@@ -85,7 +164,7 @@ public class MainActivity extends BaseActivity {
         TextView textView = new TextView(this);
         textView.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1));
         textView.setText(text);
-        textView.setGravity(Gravity.CENTER);
+        textView.setGravity(Gravity.LEFT);
         textView.setTextAppearance(R.style.FirstColumnText);
         return textView;
     }
@@ -102,10 +181,8 @@ public class MainActivity extends BaseActivity {
     // для запуска второго потока
     private void init() {
         listView = findViewById(R.id.listView);
-        arrayList1 = new ArrayList<>();
-        arrayList2 = new ArrayList<>();
-        arrayList3 = new ArrayList<>();
-        adapter = new CustomArrayAdapter(this, R.layout.list_view_item_1, arrayList1, getLayoutInflater());
+        arrayList = new ArrayList<>();
+        adapter = new CustomArrayAdapter(this, R.layout.list_view_item_1, arrayList, getLayoutInflater());
         listView.setAdapter(adapter);
     }
 
@@ -115,7 +192,7 @@ public class MainActivity extends BaseActivity {
             Elements table = doc.getElementsByTag("tbody");
             Element our_table = table.get(0);
 
-            for (int i = 0; i < our_table.childrenSize(); i++) {
+            for (int i = 1; i < our_table.childrenSize(); i++) {
                 // Парсинг данных из нужных столбцов
                 String data1 = our_table.children().get(i).child(0).text();
                 String data2 =

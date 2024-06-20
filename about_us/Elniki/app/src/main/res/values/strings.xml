@@ -80,8 +80,8 @@
     <string name="meters">310 метров</string>
 
     <string name="skipass_type">Тип скипасса</string>
-    <string name="adult_rate">Тариф Взрослый</string>
-    <string name="child_rate">Тариф Детский</string>
+    <string name="day_off">1 час выходной</string>
+    <string name="weekdays">1час будни</string>
     <string name="card_cost">Стоимость карты</string>
     <string name="card_cost_value">100 руб.</string>
     <string name="single_lift">Разовый подъём на подъёмнике</string>

@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_size"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/header"
+                    android:src="@drawable/back"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
                     android:layout_marginTop="88dp"
                     android:text="@string/Title"
                     android:textAlignment="center"
-                    android:textColor="@color/blue400"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/text_size_large"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -332,13 +332,13 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/adult_rate"/>
+                            android:text="@string/day_off"/>
                         <TextView
                             style="@style/TableHeaderText"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/child_rate"/>
+                            android:text="@string/weekdays"/>
                     </TableRow>
 
 

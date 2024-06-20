@@ -41,9 +41,6 @@ public class CustomArrayAdapter extends ArrayAdapter<ListItemClass> {
             viewHolder.data2 = convertView.findViewById(R.id.tvData2);
             viewHolder.data3 = convertView.findViewById(R.id.tvData3);
             convertView.setTag(viewHolder);
-
-
-
         }
         else
         {
